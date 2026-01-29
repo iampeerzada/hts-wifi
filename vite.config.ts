@@ -2,18 +2,18 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  publicDir: 'public', // Ensures assets in 'public' folder are copied to 'dist'
+  // Vite looks for this folder to copy static files (like logo.png) to dist/
+  publicDir: 'public', 
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser',
+    // Generates clean, production-ready code
+    minify: 'esbuild',
+    emptyOutDir: true,
   },
   server: {
     port: 3000,
-    open: true,
   },
 });
