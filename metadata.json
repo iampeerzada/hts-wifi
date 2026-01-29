@@ -1,0 +1,8 @@
+{
+  "name": "Haryana Tele Services - HTS Wifi",
+  "description": "A high-performance internet and IPTV service provider website with a sleek Starlink-inspired aesthetic, featuring dynamic plan management and an administrative dashboard.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
